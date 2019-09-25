@@ -6,7 +6,7 @@
     <div class="card-body">
       <div>
         <h6 class="text-info"> Price</h6>
-      <label class="checkbox"><input type="checkbox" value="">Rs. 1000-below</label>
+      <label class="checkbox"><input type="checkbox" value="">Below Rs.1000</label>
       <label class="checkbox"><input type="checkbox" value="">Rs. 1000-4000</label>
 
       <label class="checkbox"><input type="checkbox" value="">Rs. 4000-8000</label>
@@ -25,20 +25,16 @@
 
   </div>
     <div class = "card col-lg-9 mr-auto">
-      <div >
-
-        <div class="pb-2 pt-2" *ngFor="let loop of infor">
-
-          <div class="card">
-            <div class="card-header"><img src="{{loop.url}}" style="height: 200px;width: 200px;"></div>
-            <div class="card-body"><h4 class="text-danger">{{loop.Brand}}</h4>
-          <div class="p-2">{{loop.Specification}}<div class = "p-2">{{loop.Price}}<span class="p-2" style="text-decoration: line-through"> Rs.2500</span></div>
-          <div class="btn btn-outline-info">Add To Cart</div>
-          </div></div>
-
-
+      <div class="row">
+          <div class="col-lg-3" *ngFor="let loop of infor">
+                <div ><img src="{{loop.url}}" style="height: 200px;width: 200px;"></div>
+                <div ><h4 class="text-danger">{{loop.Brand}}</h4>
+                <div class="p-2">{{loop.Specification}}<div class = "p-2">{{loop.Price}}<span class="p-2" style="text-decoration: line-through"> Rs.2500</span></div>
+                <div class="btn btn-outline-info">Add To Cart
+                </div>
+                </div>
+                </div>
           </div>
-        </div>
       </div>
     </div>
 
