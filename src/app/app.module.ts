@@ -11,6 +11,9 @@ import { UserCartComponent } from './user-cart/user-cart.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { BottomlineComponent } from './bottomline/bottomline.component';
+import {ServiceEcommService} from './service-ecomm.service';
+import {FormsModule} from '@angular/forms';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,11 @@ import { BottomlineComponent } from './bottomline/bottomline.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceEcommService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

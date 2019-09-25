@@ -2,11 +2,11 @@
 
   <div class="row">
   <div class="card col-lg-2 mr-auto">
-<div class="card-header"><img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3pBTaB3FoWut8Hl7k9KlTASpn2e7iw_LGI9AcUTgekyGCm-NJyA"></div>
+    <div class="card-header"><span><img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3pBTaB3FoWut8Hl7k9KlTASpn2e7iw_LGI9AcUTgekyGCm-NJyA"></span></div>
     <div class="card-body">
       <div>
         <h6 class="text-info"> Price</h6>
-      <label class="checkbox"><input type="checkbox" value="">Rs. 500-1000</label>
+      <label class="checkbox"><input type="checkbox" value="">Rs. 1000-below</label>
       <label class="checkbox"><input type="checkbox" value="">Rs. 1000-4000</label>
 
       <label class="checkbox"><input type="checkbox" value="">Rs. 4000-8000</label>
@@ -24,7 +24,23 @@
     </div>
 
   </div>
+    <div class = "card col-lg-9 mr-auto">
+      <div style="display:flex;justify-content: space-between">
+<div  class="row">
+        <div *ngFor="let loop of infor">
+          <div class="col-lg-1">
+          <div class="card ">
+          <div class="card-header"><img src="{{loop.url}}" style="height: 200px;width: 200px;"></div>
+        <div class="card-body text-danger">{{loop.Brand}}</div>
+        <div class="p-2">{{loop.Specification}}</div>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
   </div>
+
 </div>
