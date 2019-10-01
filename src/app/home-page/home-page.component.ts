@@ -14,4 +14,5 @@ infor;
     this.Service.getinformation().subscribe((data) => {this.infor = data; });
   }
 
+  fun1($event: any) { }
 }

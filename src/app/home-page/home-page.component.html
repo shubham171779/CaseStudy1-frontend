@@ -28,7 +28,7 @@
       <div class="row">
           <div class="col-lg-3" *ngFor="let loop of infor">
                 <div ><img src="{{loop.url}}" style="height: 200px;width: 200px;"></div>
-            <div ><h4 class="text-danger"><a href="#">{{loop.Brand}}</a></h4>
+            <div ><h4><a href="#"  class="text-danger" (click)="fun1($event)">{{loop.Brand}}</a></h4>
                 <div class="p-2">{{loop.Specification}}<div class = "p-2">{{loop.Price}}<span class="p-2" style="text-decoration: line-through"> {{loop.Original}}</span></div>
                 <div class="btn btn-outline-info">Add To Cart
                 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServiceEcommService} from '../service-ecomm.service';
 
 @Component({
   selector: 'app-product-details',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-
-  constructor() { }
+infor;
+  constructor(private Serv: ServiceEcommService) { }
 
   ngOnInit() {
+    this.Serv.getinformation().subscribe((data) => {this.infor = data; });
   }
+  getInfo() {
+
+
+  }
+
 
 }
