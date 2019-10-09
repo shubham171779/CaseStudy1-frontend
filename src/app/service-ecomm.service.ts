@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 
 @Injectable({
@@ -12,9 +12,20 @@ export class ServiceEcommService {
     const url = '/assets/data/dataBrand.json';
     return this.client.get(url);
   }
-  getBackend()
+
+  getBacken()
   {
-    const u1 = 'http://localhost:2000/Pro/product';
-    return this.client.get(u1);
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization : 'Basic ' + token});
+    const u1 = 'http://localhost:2000/api/getallitems';
+    return this.client.get(u1, {headers});
   }
+  getBackend(url6)
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization : 'Basic ' + token});
+    const u1 = 'http://localhost:2000/api/id/' + url6;
+    return this.client.get(u1, {headers});
+  }
+
 }

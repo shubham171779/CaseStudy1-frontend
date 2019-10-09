@@ -1,12 +1,12 @@
 <div id="logreg-forms">
   <form class="form-signin">
     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" >
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" >
+    <input type="username" id="username" class="form-control" name="username" [(ngModel)]="username" >
+    <input type="password" id="password" class="form-control" name="password" [(ngModel)]="password">
 
-    <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+    <button class="btn btn-success btn-block" type="submit"  (click)="login()"><i class="fas fa-sign-in-alt"></i> Sign in</button>
     <a href="#" id="forgot_pswd">Forgot password?</a>
-    <p>{{gooo[2].brand}}</p>
+
 
   </form>
 
