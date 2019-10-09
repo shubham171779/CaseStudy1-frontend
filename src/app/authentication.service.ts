@@ -18,6 +18,13 @@ export class AuthenticationService {
     }));
 
 }
+isUserLoggedIn()
+{
+  const user = sessionStorage.getItem('token');
+  console.log(!(user === null));
+  return !(user === null);
+
+}
 logoutService()
 {
   sessionStorage.removeItem('token');

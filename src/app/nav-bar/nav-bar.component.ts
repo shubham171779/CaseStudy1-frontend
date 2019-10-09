@@ -5,6 +5,7 @@ import {HomePageComponent} from '../home-page/home-page.component';
 
 import {HomePageService} from '../home-page.service';
 import {AppService} from '../app.service';
+import {AuthenticationService} from '../authentication.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,7 +14,7 @@ import {AppService} from '../app.service';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private homeer: HomePageService, private service: AppService) { }
+  constructor(private homeer: HomePageService, private service: AppService,private log: AuthenticationService) { }
 mypro;
   ngOnInit()
   {
@@ -22,5 +23,6 @@ mypro;
   }
   logout() {
     this.service.isLoggedIn(false);
+
   }
 }
