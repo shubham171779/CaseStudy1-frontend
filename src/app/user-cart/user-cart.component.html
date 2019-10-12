@@ -1,1 +1,20 @@
-<p>user-cart works!</p>
+<table>
+  <thead>
+USER CART
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of cartvar">
+    <td>{{c.itm.id}}</td>
+    <td><img src=""></td>
+    <td>
+      <button (click)="decrement(c.itm.productId)">-</button>
+      <input type = "text" value="{{c.quantity}}">
+      <button (click)="increment(c.itm.productId)">+</button>
+    </td>
+    <td>{{c.itm.price}}</td>
+    <td>
+      <button (click)="deletion(c.itm.productId)">X</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

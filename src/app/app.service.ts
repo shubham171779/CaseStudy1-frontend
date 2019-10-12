@@ -16,4 +16,5 @@ export class AppService {
     const auth = sessionStorage.getItem('auth');
     return JSON.parse(auth);
   }
+
 }

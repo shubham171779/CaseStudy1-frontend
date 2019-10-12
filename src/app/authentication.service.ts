@@ -28,5 +28,6 @@ isUserLoggedIn()
 logoutService()
 {
   sessionStorage.removeItem('token');
+  sessionStorage.removeItem('auth');
 }
 }

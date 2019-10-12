@@ -13,9 +13,10 @@
     </form>
   </div>
   <a *ngIf="!log.isUserLoggedIn()"  routerLink="/login" class="ml-sm-2 text-success">Login</a>
+  <a *ngIf="log.isUserLoggedIn()" routerLink="usercart" class="ml-sm-2 text-success">MY CART</a>
   <a *ngIf="log.isUserLoggedIn()" (click)="logout()" routerLink="/login" class="ml-sm-2 text-success">LogOut</a>
 
-  <a routerLink="/signup" class="ml-sm-2 text-success">Sign Up</a>
+  <a *ngIf="!log.isUserLoggedIn()" routerLink="/signup" class="ml-sm-2 text-success">Sign Up</a>
 
 </nav>
 

@@ -5,7 +5,7 @@
 
     <li class="nav-item active">
 
-      <a class="nav-link " routerLink="/home">Home </a>
+      <a class="nav-link " (click)="getHome()" routerLink="/home">Home </a>
     </li>
     <li class="nav-item active">
 
@@ -61,14 +61,14 @@
     <div class = "card col-lg-9 mr-auto">
       <div class="row">
         <div class="col-lg-3" *ngFor="let loop of infor">
-          <a href="/productDetails/{{loop.productId}}"> <div ><img src="{{loop.image}}" style="height: 200px;width: 200px;"></div>
+          <a href="/productDetails/{{loop.productId}}"> <div ><img src="{{loop.image}}" style="height: 200px;width: 200px;"></div></a>
             <div ><h4 class="text-danger">{{loop.details}}</h4>
               <div class=" text-dark">{{loop.subcategory}}<div class = "p-2">{{loop.price}}<span class="p-2" style="text-decoration: line-through"> {{loop.Original}}</span></div>
-                <div class="btn btn-outline-info">Add To Cart
+                <div class="btn btn-outline-info" (click)="addtocar(loop.productId)" >Add To Cart
                 </div>
               </div>
             </div>
-          </a> </div>
+          </div>
       </div>
     </div>
 

@@ -3,6 +3,8 @@ import {ServiceEcommService} from '../service-ecomm.service';
 import {HomePageService} from '../home-page.service';
 import {AppService} from '../app.service';
 import {Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {UsercartService} from '../usercart.service';
 
 @Component({
   selector: 'app-home-page',
@@ -11,10 +13,23 @@ import {Router} from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 infor;
-  constructor(private Service: ServiceEcommService, private home: HomePageService,private service: AppService, private router: Router) { }
+usecart;
+  constructor(private Service: ServiceEcommService, private home: HomePageService,private service: AppService, private router: Router,private  usercart: UsercartService) { }
   ngOnInit(){
     return this.Service.getBacken().subscribe((data) => {this.infor = data; });
   }
+  getHome()
+  {
+    return this.Service.getBacken().subscribe((data) => {this.infor = data; });
+  }
+addtocar(abc)
+{
+  console.log('add to cart');
+  this.usercart.addtoCart(abc).subscribe(data=> {
+    this.usecart = data;
+  });
+  this.router.navigate(['usercart']);
+}
   getClothes()
   {
 

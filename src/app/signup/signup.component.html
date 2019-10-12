@@ -1,12 +1,12 @@
 <div id="logreg-forms">
   <form class="form-signin">
     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign Up</h1>
-    <input type="email" id="Username" class="form-control" placeholder="Username" >
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" >
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" >
-    <input type="password" id="ConformPassword" class="form-control" placeholder="Confirm Password" >
+    <input type="email" id="Username" class="form-control" placeholder="Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+    <input type="password" id="ConformPassword" class="form-control" placeholder="Confirm Password" [(ngModel)]="confirm" [ngModelOptions]="{standalone: true}">
 
-    <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign Up</button>
+    <button class="btn btn-success btn-block" type="submit" (click)="signup()"><i class="fas fa-sign-in-alt" ></i> Sign Up</button>
 
 
   </form>

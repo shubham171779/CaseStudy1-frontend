@@ -14,6 +14,7 @@ export const Main_Routes: Routes = [{
   {path: 'cart', component: UserCartComponent, },
   {path: 'signup', component: SignupComponent, },
   {path: 'login', component: LoginComponent, },
+  {path: 'usercart', component: UserCartComponent, },
 
 
 
