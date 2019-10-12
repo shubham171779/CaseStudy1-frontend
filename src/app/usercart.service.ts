@@ -38,4 +38,10 @@ export class UsercartService {
     console.log(abc);
     return this.client.get('http://localhost:2000/carts/cart/addItem/productId/' + abc, {headers});
   }
+  checkout()
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization : 'Basic ' + token});
+    return this.client.get('http://localhost:2000/carts/checkout', {headers});
+  }
 }

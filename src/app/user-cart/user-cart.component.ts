@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsercartService} from '../usercart.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-cart',
@@ -8,7 +9,8 @@ import {UsercartService} from '../usercart.service';
 })
 export class UserCartComponent implements OnInit {
 cartvar;
-  constructor(private obj: UsercartService) { }
+checkoutd;
+  constructor(private obj: UsercartService, private router: Router) { }
 
   ngOnInit() {
     this.obj.showcart().subscribe(data => {
@@ -43,6 +45,16 @@ deletion(abc2)
 
     });
   });
+}
+checkout()
+{
+  this.obj.checkout().subscribe(data => {
+    this.checkoutd = data;
+
+    alert('nothing in cart continue shopping');
+  });
+  this.router.navigate(['usercart']);
+  location.reload();
 }
 
 }
