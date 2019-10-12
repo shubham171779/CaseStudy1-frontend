@@ -51,10 +51,11 @@ checkout()
   this.obj.checkout().subscribe(data => {
     this.checkoutd = data;
 
-    alert('nothing in cart continue shopping');
+
   });
   this.router.navigate(['usercart']);
   location.reload();
+  alert('nothing in cart continue shopping');
 }
 
 }
