@@ -10,6 +10,8 @@ import {Router} from '@angular/router';
 export class UserCartComponent implements OnInit {
 cartvar;
 checkoutd;
+sum =0;
+count;
   constructor(private obj: UsercartService, private router: Router) { }
 
   ngOnInit() {
@@ -17,22 +19,31 @@ checkoutd;
 
       this.cartvar = data;
       console.log(data);
+      // this.sum=0;
+      // this.count=0;
+      // for(const val of this.cartvar)
+      // {
+      //   this.sum += val.itm.price * val.quantity;
+      //   this.count += 1;
+      // }
+this.totalchange();
     });
+
   }
-increment(abc)
-{
+increment(abc) {
   this.obj.increment(1, abc).subscribe(data =>{
     this.obj.showcart().subscribe(data1 =>{
       this.cartvar = data1;
+      this.totalchange();
     });
   });
 }
-  decrement(abc)
-  {
+  decrement(abc) {
     console.log(abc);
     this.obj.decrement(1, abc).subscribe(data =>{
       this.obj.showcart().subscribe(data1 => {
         this.cartvar = data1;
+        this.totalchange();
       });
     });
   }
@@ -42,7 +53,7 @@ deletion(abc2)
     this.cartvar = data;
     this.obj.showcart().subscribe(data1 => {
       this.cartvar = data1;
-
+      this.totalchange();
     });
   });
 }
@@ -53,9 +64,20 @@ checkout()
 
 
   });
-  this.router.navigate(['usercart']);
+  this.router.navigate(['OrderHistory']);
   location.reload();
   alert('nothing in cart continue shopping');
 }
+totalchange()
+{
+  this.sum = 0;
+  this.count = 0;
+  for (const val of this.cartvar)
+  {
+    this.sum += val.itm.price * val.quantity;
+    this.count += 1;
+  }
+}
+
 
 }

@@ -32,11 +32,56 @@
   </ul>
 </div>
 </nav>
+<div class="container-fluid mt-3 mb-5 ml-auto mr-auto ">
+  <div class="col-10 ml-auto mr-auto h-70" >
+    <ngb-carousel class="carouselimg ml-auto mr-auto">
+
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/image/1.jpg" alt="Random second slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">No mouse events...</h3>-->
+        <!--      <p class="text-dark">This carousel doesn't pause or resume on mouse events</p>-->
+        <!--    </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/image/2.jpg"  alt="Random third slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">No keyboard...</h3>-->
+        <!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+        <!--    </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/image/3.PNG" alt="Random fourth slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">And no wrap after last slide.</h3>-->
+        <!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+        <!--    </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/image/4.jpg" alt="Random fourth slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">And no wrap after last slide.</h3>-->
+        <!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+        <!--    </div>-->
+      </ng-template>
+    </ngb-carousel>
+  </div>
+<div class="text-center text-white">
+  ___
+</div>
+
 <div class="container-fluid">
 
   <div class="row">
     <div class="card col-lg-2 mr-auto">
-      <div class="card-header"><span><img class="rounded-circle" STYLE="width: 150px;height: 150px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3pBTaB3FoWut8Hl7k9KlTASpn2e7iw_LGI9AcUTgekyGCm-NJyA"></span></div>
       <div class="card-body">
         <div>
           <h6 class="text-info"> Price</h6>
@@ -50,17 +95,19 @@
         <div>
           <h6 class="text-info"> Brand</h6>
           <div><label class="checkbox"><input type="checkbox" value="">ADIDAS</label></div>
-          <div><label class="checkbox"><input type="checkbox" value="">SKECHERS</label></div>
           <div><label class="checkbox"><input type="checkbox" value="">NIKE</label></div>
-          <div><label class="checkbox"><input type="checkbox" value="">VANS</label></div>
+          <div><label class="checkbox"><input type="checkbox" value="">XIAOMI</label></div>
+          <div><label class="checkbox"><input type="checkbox" value="">SAMSUNG</label></div>
+          <div><label class="checkbox"><input type="checkbox" value="">PUMA</label></div>
+          <div><label class="checkbox"><input type="checkbox" value="">NIVIA</label></div>
 
         </div>
       </div>
 
     </div>
     <div class = "card col-lg-9 mr-auto">
-      <div class="row">
-        <div class="col-lg-3" *ngFor="let loop of infor">
+      <div class="row ">
+        <div class="col-lg-3 mt-auto mb-auto" *ngFor="let loop of infor">
           <a href="/productDetails/{{loop.productId}}"> <div ><img src="{{loop.image}}" style="height: 200px;width: 200px;"></div></a>
             <div ><h4 class="text-danger">{{loop.details}}</h4>
               <div class=" text-dark">{{loop.subcategory}}<div class = "p-2">{{loop.price}}<span class="p-2" style="text-decoration: line-through"> {{loop.Original}}</span></div>

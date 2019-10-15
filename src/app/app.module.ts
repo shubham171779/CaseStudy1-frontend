@@ -14,6 +14,9 @@ import { BottomlineComponent } from './bottomline/bottomline.component';
 import {ServiceEcommService} from './service-ecomm.service';
 import {FormsModule} from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+
 
 
 @NgModule({
@@ -25,14 +28,17 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     UserCartComponent,
     LoginComponent,
     SignupComponent,
-    BottomlineComponent
+    BottomlineComponent,
+    OrderHistoryComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [ServiceEcommService],
   bootstrap: [AppComponent]

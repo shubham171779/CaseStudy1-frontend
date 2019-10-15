@@ -4,14 +4,14 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class HomePageService {
+export class OrderHistoryService {
 
-  constructor(private client: HttpClient ) { }
-  getByCat(category) {
+  constructor(private http: HttpClient) { }
+  finalCart()
+  {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization : 'Basic ' + token});
-    const url = 'http://localhost:2000/api/category/' + category;
-    return this.client.get(url,{headers});
+    const url = 'http://localhost:2000/carts/checkout';
+    return this.http.get(url,{headers});
   }
-
 }
