@@ -44,4 +44,16 @@ export class UsercartService {
     const headers = new HttpHeaders({Authorization : 'Basic ' + token});
     return this.client.get('http://localhost:2000/carts/checkout', {headers});
   }
+  usercart()
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization : 'Basic ' + token});
+    return this.client.get('http://localhost:2000/user/allcart', {headers});
+  }
+  pricefilter(price1, price2)
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization : 'Basic ' + token});
+    return this.client.get('http://localhost:2002/api/items/' + price1 + '/' + price2, {headers});
+  }
 }

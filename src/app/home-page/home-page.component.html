@@ -47,7 +47,7 @@
       </ng-template>
       <ng-template ngbSlide>
         <div class="picsum-img-wrapper">
-          <img class="carouselimg2" src="../assets/image/2.jpg"  alt="Random third slide">
+          <img class="carouselimg2" src="../assets/image/5.PNG"  alt="Random third slide">
         </div>
         <!--    <div class="carousel-caption">-->
         <!--      <h3 class="text-dark">No keyboard...</h3>-->
@@ -85,23 +85,23 @@
       <div class="card-body">
         <div>
           <h6 class="text-info"> Price</h6>
-          <label class="checkbox"><input type="checkbox" value="">Below Rs.1000</label>
-          <label class="checkbox"><input type="checkbox" value="">Rs. 1000-4000</label>
+          <label class="radio"><input type="radio" name="option1" (click)="pricefilter(0,1000)">Below Rs.1000</label>
+          <label class="radio"><input type="radio" name="option1" (click)="pricefilter(1000,4000)">Rs. 1000-4000</label>
 
-          <label class="checkbox"><input type="checkbox" value="">Rs. 4000-8000</label>
+          <label class="radio"><input type="radio" name="option1" (click)="pricefilter(4000,8000)">Rs. 4000-8000</label>
 
-          <label class="checkbox"><input type="checkbox" value="">Rs. 8000 and above</label>
+          <label class="radio"><input type="radio" name="option1" (click)="pricefilter(8000,20000)">Rs. 8000 and above</label>
         </div>
-        <div>
-          <h6 class="text-info"> Brand</h6>
-          <div><label class="checkbox"><input type="checkbox" value="">ADIDAS</label></div>
-          <div><label class="checkbox"><input type="checkbox" value="">NIKE</label></div>
-          <div><label class="checkbox"><input type="checkbox" value="">XIAOMI</label></div>
-          <div><label class="checkbox"><input type="checkbox" value="">SAMSUNG</label></div>
-          <div><label class="checkbox"><input type="checkbox" value="">PUMA</label></div>
-          <div><label class="checkbox"><input type="checkbox" value="">NIVIA</label></div>
+<!--        <div>-->
+<!--          <h6 class="text-info"> Brand</h6>-->
+<!--          <div><label class="checkbox"><input type="checkbox" >ADIDAS</label></div>-->
+<!--          <div><label class="checkbox"><input type="checkbox" value="">NIKE</label></div>-->
+<!--          <div><label class="checkbox"><input type="checkbox" value="">XIAOMI</label></div>-->
+<!--          <div><label class="checkbox"><input type="checkbox" value="">SAMSUNG</label></div>-->
+<!--          <div><label class="checkbox"><input type="checkbox" value="">PUMA</label></div>-->
+<!--          <div><label class="checkbox"><input type="checkbox" value="">NIVIA</label></div>-->
 
-        </div>
+<!--        </div>-->
       </div>
 
     </div>

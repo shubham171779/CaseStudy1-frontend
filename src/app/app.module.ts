@@ -13,9 +13,11 @@ import { SignupComponent } from './signup/signup.component';
 import { BottomlineComponent } from './bottomline/bottomline.component';
 import {ServiceEcommService} from './service-ecomm.service';
 import {FormsModule} from '@angular/forms';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+
+import { MyprofileComponent } from './myprofile/myprofile.component';
 
 
 
@@ -30,6 +32,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
     SignupComponent,
     BottomlineComponent,
     OrderHistoryComponent,
+    MyprofileComponent
 
 
   ],

@@ -8,6 +8,7 @@ import {AppService} from '../app.service';
 import {AuthenticationService} from '../authentication.service';
 import {icuFromI18nMessage} from '@angular/compiler/src/render3/view/i18n/util';
 import {HttpClient} from '@angular/common/http';
+import {UsercartService} from '../usercart.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -16,12 +17,21 @@ import {HttpClient} from '@angular/common/http';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private router: Router, private homeer: HomePageService, private service: AppService, private log: AuthenticationService, private client: HttpClient) { }
+  constructor(private router: Router, private homeer: HomePageService, private service: AppService, private log: AuthenticationService, private client: HttpClient, private cart: UsercartService) { }
 mypro;
   logouturl;
+  jo;
   ngOnInit()
   {
+this.cart.showcart().subscribe(data => {
+  this.jo = data;
+  console.log(this.log.uer);
 
+});
+this.cart.usercart().subscribe(data => {
+  this.jo = data;
+  console.log(this.jo);
+});
 
   }
   logout() {

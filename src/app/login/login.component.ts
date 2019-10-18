@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     {
       this.router.navigate(['home']);
     }
+    console.log(this.username);
   }
   login() {
     console.log('login function');

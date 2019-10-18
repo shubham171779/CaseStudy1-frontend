@@ -70,7 +70,13 @@ mycart()
   }
 }
 
+  pricefilter(price1, price2)
+  {
+    this.usercart.pricefilter(price1, price2).subscribe(data7 => {
+      this.infor = data7;
 
+    });
+  }
 
 
 }
