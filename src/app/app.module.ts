@@ -18,6 +18,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 
 import { MyprofileComponent } from './myprofile/myprofile.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 
 
@@ -32,7 +34,9 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
     SignupComponent,
     BottomlineComponent,
     OrderHistoryComponent,
-    MyprofileComponent
+    MyprofileComponent,
+    AddProductComponent,
+    EditprofileComponent
 
 
   ],

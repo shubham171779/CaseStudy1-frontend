@@ -13,6 +13,8 @@
     </form>
   </div>
   <a *ngIf="!log.isUserLoggedIn()"  routerLink="/login" class="ml-sm-2 text-success">Login</a>
+  <a *ngIf="log.isUserLoggedIn()"  routerLink="/additem" class="ml-sm-2 text-success">Add New Product</a>
+
   <a *ngIf="log.isUserLoggedIn()"  routerLink="/myprofile" class="ml-sm-2 text-success">MyProfile </a>
 
   <a *ngIf="log.isUserLoggedIn()" routerLink="/orderHistory" class="ml-sm-2 text-success">Orders</a>

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Itemdata} from './Itemdata';
+import {postdata} from './postdataService';
 
 @Injectable({
   providedIn: 'root'
@@ -54,6 +56,24 @@ export class UsercartService {
   {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization : 'Basic ' + token});
-    return this.client.get('http://localhost:2002/api/items/' + price1 + '/' + price2, {headers});
+    return this.client.get('http://localhost:2000/api/items/' + price1 + '/' + price2, {headers});
+  }
+  additem(itemdata : Itemdata)
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization : 'Basic ' + token});
+    return this.client.post('http://localhost:2000/api/items', itemdata,{headers});
+  }
+  updateuser(id, pdata: postdata)
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({ Authorization : 'Basic ' + token});
+    return this.client.put("http://localhost:2000/user/updateuser/"+id,pdata,{headers});
+  }
+  getuser()
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({ Authorization : 'Basic ' + token});
+    return this.client.get("http://localhost:2000/user/users",{headers});
   }
 }
