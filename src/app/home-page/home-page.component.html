@@ -105,9 +105,9 @@
       </div>
 
     </div>
-    <div class = "card col-lg-9 mr-auto">
+    <div class = "card col-lg-9  mr-auto">
       <div class="row ">
-        <div class="col-lg-3  mt-auto pb-2" *ngFor="let loop of infor">
+        <div class="col-lg-3  col-md-6 mt-auto pb-2" *ngFor="let loop of infor">
           <a href="/productDetails/{{loop.productId}}"> <div ><img src="{{loop.image}}" style="height: 200px;width: 200px;"></div></a>
             <div ><h4 class="text-danger">{{loop.details}}</h4>
               <div class=" text-dark">{{loop.subcategory}}<div class = "p-2">{{loop.price}}<span class="p-2" style="text-decoration: line-through"> {{loop.Original}}</span></div>
